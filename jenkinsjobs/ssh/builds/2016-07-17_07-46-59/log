@@ -1,0 +1,5 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_rsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson1142365488123474859.sh
++ ssh 192.168.0.106 sudo useradd -m qwe && sudo mkdir /home/qwe/.ssh
+Finished: SUCCESS

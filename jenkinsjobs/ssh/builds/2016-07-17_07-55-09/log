@@ -1,0 +1,12 @@
+Started by user anonymous
+Copying file to /home/jenkins/id_dsa.pub
+FATAL: Failed to mkdirs: /home/jenkins
+[8mha:AAAAWB+LCAAAAAAAAABb85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.io.IOException: Failed to mkdirs: /home/jenkins
+	at hudson.FilePath.mkdirs(FilePath.java:817)
+	at hudson.model.FileParameterValue$1.setUp(FileParameterValue.java:108)
+	at hudson.model.Build$RunnerImpl.doRun(Build.java:133)
+	at hudson.model.AbstractBuild$AbstractRunner.run(AbstractBuild.java:458)
+	at hudson.model.Run.run(Run.java:1376)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:46)
+	at hudson.model.ResourceController.execute(ResourceController.java:88)
+	at hudson.model.Executor.run(Executor.java:175)

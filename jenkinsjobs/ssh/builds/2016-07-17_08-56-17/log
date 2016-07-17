@@ -1,0 +1,7 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson8000950548978967343.sh
++ ssh 192.168.0.106 sudo useradd -e 2050-05-03 -m zorka && sudo mkdir /home/zorka/.ssh && sudo chmod 700 /home/zorka/.ssh && sudo chown zorka:zorka /home/zorka -R
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo cp /home/jenkins/id_dsa.pub /home/zorka/.ssh/authorized_keys && sudo chown zorka:zorka /home/zorka -R && sudo chmod 600 /home/zorka/.ssh/authorized_keys
+Finished: SUCCESS

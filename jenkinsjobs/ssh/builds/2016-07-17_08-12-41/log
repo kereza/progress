@@ -1,0 +1,7 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson2409868665343219941.sh
++ ssh 192.168.0.106 sudo useradd -m asasasaszz && sudo mkdir /home/asasasaszz/.ssh && sudo chmod 700 /home/asasasaszz/.ssh
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo mv /home/jenkins/id_dsa.pub /home/asasasaszz/.ssh && sudo chown asasasaszz:asasasaszz /home/asasasaszz -R && sudo chmod 644 /home/asasasaszz/.ssh/id_dsa.pub
+Finished: SUCCESS

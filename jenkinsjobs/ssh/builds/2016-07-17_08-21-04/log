@@ -1,0 +1,6 @@
+Started by user anonymous
+[workspace] $ /bin/sh -xe /tmp/hudson2043997066852068907.sh
++ ssh 192.168.0.106 sudo useradd -m bbbbbb && sudo mkdir /home/bbbbbb/.ssh && sudo chmod 700 /home/bbbbbb/.ssh
+useradd: user 'bbbbbb' already exists
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

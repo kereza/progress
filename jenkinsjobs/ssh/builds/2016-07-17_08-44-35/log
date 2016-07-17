@@ -1,0 +1,7 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson8465238001715815314.sh
++ ssh 192.168.0.106 sudo useradd -m iva && sudo mkdir /home/iva/.ssh && sudo chmod 700 /home/iva/.ssh && sudo chown iva:iva /home/iva -R
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo cp /home/jenkins/id_dsa.pub /home/iva/.ssh/authorized_keys && sudo chown iva:iva /home/iva -R
+Finished: SUCCESS

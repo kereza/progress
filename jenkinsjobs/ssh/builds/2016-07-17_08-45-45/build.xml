@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>username</name>
+          <description>add your ssh username</description>
+          <value>ovi</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.FileParameterValue>
+          <name>/var/lib/jenkins/id_dsa.pub</name>
+          <description>add your public ssh-key (DSA encryption)</description>
+          <file class="org.apache.commons.fileupload.disk.DiskFileItem" serialization="custom">
+            <org.apache.commons.fileupload.disk.DiskFileItem>
+              <default>
+                <isFormField>false</isFormField>
+                <size>-1</size>
+                <sizeThreshold>10240</sizeThreshold>
+                <cachedContent>c3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFEVGZwbWFWandxNWNDb080bmJq
+WGJ1V1FYcGM1Tm9Fa1drZUFVZUNQYWxyc0hZNlRRTnNQVjM0dVhkUTJDclYybW9OSE1tL09JRFhs
+YXM4ZHFkZnNuNWZhak8yZXhZZldieVQ1NHVKcmE0TjQ3OFdVYWg0cUhQNitwczlUT1ZYdmd2YnBi
+VFdyUEQ5RFY3TGl6WEdibXI5bmpPNHdZU0g3VDZqaDdmdFlDYUYwRmZnL2Fqd3RXTDZNaVY5b3ZT
+R2ZDY09sQVBUMThkUmJWcTNzZGV6SjFoZWFhc2dBZjdsenZsM0tFWkRvRkRtbGUzd3dNTFpDRS9w
+Mk56clVWN0c0dU8vZGlvaXRZUWpleXJvQ0UwYy9sVjZuOTVNdFNycG5CUFVjRzVCR3o0ci9wdjkx
+UmZ1VWxTRWdJUFUzMCs2endWZ01xMTFhU095WnhhK205d2RLOFYgamVua2luc0BtYWNoaW5lQUE=
+</cachedContent>
+                <contentType>application/vnd.ms-publisher</contentType>
+                <fieldName>file0</fieldName>
+                <fileName>id_dsa.pub</fileName>
+              </default>
+            </org.apache.commons.fileupload.disk.DiskFileItem>
+          </file>
+          <originalFileName>id_dsa.pub</originalFileName>
+          <location>/var/lib/jenkins/id_dsa.pub</location>
+        </hudson.model.FileParameterValue>
+      </parameters>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserCause>
+          <authenticationName>anonymous</authenticationName>
+        </hudson.model.Cause_-UserCause>
+      </causes>
+    </hudson.model.CauseAction>
+  </actions>
+  <number>18</number>
+  <result>SUCCESS</result>
+  <duration>363</duration>
+  <charset>US-ASCII</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/jobs/ssh/workspace</workspace>
+  <hudsonVersion>1.424.6</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits/>
+</build>

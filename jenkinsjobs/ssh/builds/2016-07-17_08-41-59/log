@@ -1,0 +1,7 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson5948305977498072951.sh
++ ssh 192.168.0.106 sudo useradd -m pori && sudo mkdir /home/pori/.ssh && sudo chmod 700 /home/pori/.ssh && sudo touch /home/pori/.ssh/authorized_keys && sudo chown pori:pori /home/pori -R
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo cp /home/jenkins/id_dsa.pub /home/pori/.ssh/authorized_keys2
+Finished: SUCCESS

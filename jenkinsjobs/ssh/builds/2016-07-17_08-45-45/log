@@ -1,0 +1,7 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson4290572072973809038.sh
++ ssh 192.168.0.106 sudo useradd -m ovi && sudo mkdir /home/ovi/.ssh && sudo chmod 700 /home/ovi/.ssh && sudo chown ovi:ovi /home/ovi -R
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo cp /home/jenkins/id_dsa.pub /home/ovi/.ssh/authorized_keys && sudo chown ovi:ovi /home/ovi -R && sudo chmod 600 /home/ovi/.ssh/authorized_keys
+Finished: SUCCESS

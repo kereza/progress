@@ -1,0 +1,9 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson597002229333790004.sh
++ ssh 192.168.0.106 sudo useradd -m ccccc && sudo mkdir /home/ccccc/.ssh && sudo chmod 700 /home/ccccc/.ssh
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo cat /home/jenkins/id_dsa.pub > /home/ccccc/.ssh/authorized_keys && sudo chown ccccc:ccccc /home/ccccc -R && sudo chmod 644 /home/ccccc/.ssh/authorized_keys
+sh: 1: cannot create /home/ccccc/.ssh/authorized_keys: Permission denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

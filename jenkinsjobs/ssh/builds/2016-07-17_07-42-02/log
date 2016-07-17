@@ -1,0 +1,10 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_rsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson1224305265322738314.sh
++ ssh 192.168.0.106 sudo useradd -m ivan && sudo mkdir /home/ivan/.ssh
+Warning: Permanently added '192.168.0.106' (ECDSA) to the list of known hosts.
+Permission denied, please try again.
+Permission denied, please try again.
+Permission denied (publickey,password).
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

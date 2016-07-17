@@ -1,0 +1,9 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson6660954579843170078.sh
++ ssh 192.168.0.106 sudo useradd -m kori && sudo mkdir /home/kori/.ssh && sudo chmod 700 /home/kori/.ssh && sudo touch /home/kori/.ssh/authorized_keys && sudo chown kori:kori /home/kori -R
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo cp /var/lib/jenkins/id_dsa.pub /home/kori/.ssh/authorized_keys2
+cp: cannot stat ‘/var/lib/jenkins/id_dsa.pub’: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

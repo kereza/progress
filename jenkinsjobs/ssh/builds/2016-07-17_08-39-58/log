@@ -1,0 +1,9 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson7267815746167501673.sh
++ ssh 192.168.0.106 sudo useradd -m keri && sudo mkdir /home/keri/.ssh && sudo chmod 700 /home/keri/.ssh && sudo touch /home/keri/.ssh/authorized_keys && sudo chown keri:keri /home/keri -R
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 cp /var/lib/jenkins/id_dsa.pub /home/keri/.ssh/authorized_keys2
+cp: failed to access ‘/home/keri/.ssh/authorized_keys2’: Permission denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

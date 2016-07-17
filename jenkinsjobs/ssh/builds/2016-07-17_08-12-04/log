@@ -1,0 +1,9 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson7260978648019956080.sh
++ ssh 192.168.0.106 sudo useradd -m wewewe && sudo mkdir /home/wewewe/.ssh && sudo chmod 700 /home/wewewe/.ssh
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo mv /home/jenkins/id_dsa.pub /home/wewewe/.ssh && sudo chown wewewe:wewewe /home/wewewe -R && sudo chmo 644 /home/wewewe/.ssh/id_dsa.pub
+sudo: chmo: command not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>add user name and public ssh-key</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>username</name>
+          <description>add your ssh username</description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.FileParameterDefinition>
+          <name>/var/lib/jenkins/id_dsa.pub</name>
+          <description>add your public ssh-key (DSA encryption)</description>
+        </hudson.model.FileParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>expire</name>
+          <description>Enter the date on which the account will expire. The date should be in the following format YYYY-MM-DD</description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>ssh 192.168.0.106 &quot;sudo useradd -e $expire -m $username &amp;&amp; sudo mkdir /home/$username/.ssh &amp;&amp; sudo chmod 700 /home/$username/.ssh &amp;&amp; sudo chown $username:$username /home/$username -R&quot;
+scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
+ssh 192.168.0.106 &quot;sudo cp /home/jenkins/id_dsa.pub /home/$username/.ssh/authorized_keys &amp;&amp; sudo chown $username:$username /home/$username -R &amp;&amp; sudo chmod 600 /home/$username/.ssh/authorized_keys&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

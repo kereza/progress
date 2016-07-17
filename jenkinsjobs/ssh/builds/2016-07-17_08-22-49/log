@@ -1,0 +1,9 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson345740572482429039.sh
++ ssh 192.168.0.106 sudo useradd -m nmbvb && sudo mkdir /home/nmbvb/.ssh && sudo chmod 700 /home/nmbvb/.ssh && sudo touch /home/nmbvb/.ssh/authorized_keys
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 sudo cat /home/jenkins/id_dsa.pub > /home/nmbvb/.ssh/authorized_keys && sudo chown nmbvb:nmbvb /home/nmbvb -R && sudo chmod 644 /home/nmbvb/.ssh/authorized_keys
+sh: 1: cannot create /home/nmbvb/.ssh/authorized_keys: Permission denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

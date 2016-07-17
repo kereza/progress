@@ -1,0 +1,7 @@
+Started by user anonymous
+Copying file to /var/lib/jenkins/id_dsa.pub
+[workspace] $ /bin/sh -xe /tmp/hudson392752777110027366.sh
++ ssh 192.168.0.106 sudo useradd -m choripapi && sudo mkdir /home/choripapi/.ssh && sudo chmod 700 /home/choripapi/.ssh && sudo touch /home/choripapi/.ssh/authorized_keys && sudo chown choripapi:choripapi /home/choripapi -R
++ scp /var/lib/jenkins/id_dsa.pub 192.168.0.106:/home/jenkins
++ ssh 192.168.0.106 cat /home/jenkins/id_dsa.pub | sudo tee /home/choripapi/.ssh/authorized_keys && sudo chmod 644 /home/choripapi/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDTfpmaVjwq5cCoO4nbjXbuWQXpc5NoEkWkeAUeCPalrsHY6TQNsPV34uXdQ2CrV2moNHMm/OIDXlas8dqdfsn5fajO2exYfWbyT54uJra4N478WUah4qHP6+ps9TOVXvgvbpbTWrPD9DV7LizXGbmr9njO4wYSH7T6jh7ftYCaF0Ffg/ajwtWL6MiV9ovSGfCcOlAPT18dRbVq3sdezJ1heaasgAf7lzvl3KEZDoFDmle3wwMLZCE/p2NzrUV7G4uO/dioitYQjeyroCE0c/lV6n95MtSrpnBPUcG5BGz4r/pv91RfuUlSEgIPU30+6zwVgMq11aSOyZxa+m9wdK8V jenkins@machineAAFinished: SUCCESS

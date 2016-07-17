@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>username</name>
+          <description>add your ssh username</description>
+          <value>bbbbbb</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.FileParameterValue>
+          <name>/var/lib/jenkins/id_dsa.pub</name>
+          <description>add your public ssh-key (DSA encryption)</description>
+          <file class="org.apache.commons.fileupload.disk.DiskFileItem" serialization="custom">
+            <org.apache.commons.fileupload.disk.DiskFileItem>
+              <default>
+                <isFormField>false</isFormField>
+                <size>-1</size>
+                <sizeThreshold>10240</sizeThreshold>
+                <cachedContent></cachedContent>
+                <contentType>application/octet-stream</contentType>
+                <fieldName>file0</fieldName>
+                <fileName></fileName>
+              </default>
+            </org.apache.commons.fileupload.disk.DiskFileItem>
+          </file>
+          <originalFileName></originalFileName>
+          <location>/var/lib/jenkins/id_dsa.pub</location>
+        </hudson.model.FileParameterValue>
+      </parameters>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserCause>
+          <authenticationName>anonymous</authenticationName>
+        </hudson.model.Cause_-UserCause>
+      </causes>
+    </hudson.model.CauseAction>
+  </actions>
+  <number>9</number>
+  <result>FAILURE</result>
+  <duration>119</duration>
+  <charset>US-ASCII</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/jobs/ssh/workspace</workspace>
+  <hudsonVersion>1.424.6</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits/>
+</build>

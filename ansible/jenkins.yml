@@ -1,0 +1,6 @@
+---
+- hosts: servers
+  sudo: yes
+  tasks:
+    - name: install jenkins
+      apt: name=jenkins update_cache=yes state=latest
