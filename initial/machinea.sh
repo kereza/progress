@@ -15,7 +15,7 @@ sudo cp -ar /vagrant/ansible /etc/
 cd /etc/ansible
 sudo chmod 644 *
 sudo ln -sf /usr/bin/ruby1.9.1 /usr/bin/ruby
-#if this symlink is not made I receive some ruby error
+#if this symlink is not created I receive some ruby error
 
 sudo rm -rf /home/vagrant/.ssh
 sudo cp -ar /vagrant/.ssh /home/vagrant
@@ -49,4 +49,4 @@ sudo echo "jenkins ALL = NOPASSWD: ALL" >> /etc/sudoers
 #Giving the jenkins user full sudo privileges without password (not good for security, but for this task it will do)
 
 sudo service jenkins restart
-# Restarting the jenkins service so it can pikc up the newly copied job. 
+# Restarting the jenkins service so it can pick up the newly copied job. 
